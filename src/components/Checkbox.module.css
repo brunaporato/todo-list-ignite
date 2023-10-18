@@ -28,7 +28,7 @@
 
 .container:hover input ~ .checkmark {
     border: 2px solid var(--blue-dark);
-    background-color: rgba(18, 190, 212, 0.212);
+    background-color: rgba(18, 189, 212, 0.116);
 }
 
 .container input:checked ~ .checkmark {
