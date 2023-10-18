@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Input } from "./components/Input";
+import { BttnCreate } from "./components/BttnCreate";
 import "./global.css";
 
 export function App() {
@@ -7,6 +8,7 @@ export function App() {
     <div>
       <Header />
       <Input />
+      <BttnCreate />
     </div>
   )
 }
