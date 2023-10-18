@@ -6,6 +6,8 @@
 
   padding-top: 7.2rem; 
 
+  cursor: pointer;
+
 
   > h1 {
     color: var(--blue);

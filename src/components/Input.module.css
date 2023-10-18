@@ -1,0 +1,15 @@
+.input {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  border-radius: .5rem;
+  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
+
+  color: var(--gray-100);
+
+  &:focus {
+    outline: 1px solid var(--purple-dark);
+  }
+}
