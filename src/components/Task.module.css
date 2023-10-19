@@ -1,0 +1,26 @@
+.div {
+  display: flex;
+
+  background: var(--gray-500);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--gray-400);
+  border-radius: .8rem;
+
+  width: fit-content;
+
+  padding: 1rem;
+  align-items: flex-start;
+  gap: .75rem;
+
+  
+  > p {
+    color: var(--gray-100);
+    line-height: 140%;
+    flex: 1 0 0;
+  }
+  
+  .done {
+    color: var(--gray-300);
+    text-decoration: line-through;
+  }
+}

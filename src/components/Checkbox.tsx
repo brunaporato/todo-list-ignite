@@ -1,13 +1,13 @@
 import styles from "./Checkbox.module.css";
 
-interface Props {
-  checked?: boolean;
+interface CheckboxProps {
+  onClick: () => void;
 }
 
-export function Checkbox({checked = false}: Props) {
+export function Checkbox({ onClick }: CheckboxProps) {
     return (
       <label className={styles.container}>
-        <input type="checkbox" className={styles.checkbox} checked={checked}/>
+        <input type="checkbox" className={styles.checkbox} onClick={onClick} />
         <span className={styles.checkmark} />
       </label>
     )

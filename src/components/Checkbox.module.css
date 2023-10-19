@@ -1,6 +1,7 @@
 .container {
     display: block;
     position: relative;
+    width: 2rem;
 }
 
 .checkbox {
@@ -15,8 +16,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
-    margin: .4rem;
 
     height: 1.7rem;
     width: 1.7rem;
@@ -47,10 +46,10 @@
 }
 
 .container .checkmark:after {
-    left: .57rem;
-    top: .25rem;
-    width: .25rem;
-    height: .8rem;
+    left: 6px;
+    top: 2.5px;
+    width: 2.5px;
+    height: 8px;
     border: solid var(--gray-100);
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);

@@ -2,7 +2,7 @@ import { Header } from "./components/Header";
 import { Input } from "./components/Input";
 import { BttnCreate } from "./components/BttnCreate";
 import { BttnDelete } from "./components/BttnDelete";
-import { Checkbox } from "./components/Checkbox";
+import { Task } from "./components/Task";
 import "./global.css";
 
 export function App() {
@@ -12,7 +12,7 @@ export function App() {
       <Input />
       <BttnCreate />
       <BttnDelete />
-      <Checkbox />
+      <Task text="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer." />
     </div>
   )
 }
