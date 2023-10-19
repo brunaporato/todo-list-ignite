@@ -9,20 +9,53 @@ import styles from "./App.module.css";
 import "./global.css";
 import { ChangeEvent, FormEvent, useState } from "react";
 
+interface TaskItem {
+  id: number;
+  text: string;
+  done: boolean;
+}
+
 export function App() {
-  const [tasks, setTasks] = useState<string[]>([]);
+  const [tasks, setTasks] = useState<TaskItem[]>([]);
   const [newTask, setNewTask] = useState<string>('');
 
   function handleCreateNewTask(e: FormEvent) {
     e.preventDefault();
 
-    setTasks([ ...tasks, newTask ]);
+    if(newTask == '') {
+      alert('Tarefa inválida')
+      return
+    }
+
+    const newTaskObject: TaskItem = {
+      id: Math.floor(Math.random() * 300) + 1,
+      text: newTask,
+      done: false
+    }
+
+    setTasks([ ...tasks, newTaskObject ]);
     setNewTask('');
   }
 
   function handleNewTaskChange(e: ChangeEvent<HTMLInputElement>) {
     e.target.setCustomValidity('');
     setNewTask(e.target.value);
+  }
+
+  function deleteTask(taskToDelete: TaskItem) {
+    const tasksWithoutDeletedOne = tasks.filter(task => task !== taskToDelete);
+    setTasks(tasksWithoutDeletedOne);
+  }
+
+  function toggleTaskDone(taskToToggle: TaskItem) {
+    const updatedTasks = tasks.map(task => {
+      if (task === taskToToggle) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    });
+
+    setTasks(updatedTasks);
   }
 
   return (
@@ -54,8 +87,10 @@ export function App() {
               tasks.map(task  => {
                 return (
                 <Task
-                  key={tasks.indexOf(task)}
-                  text={task}
+                  key={task.id}
+                  task={task}
+                  onDeleteTask={deleteTask}
+                  onToggle={toggleTaskDone}
                 />
                 )
               })

@@ -62,7 +62,7 @@
 
 .tasks {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-self: stretch;
   gap: 1.2rem;
 }
