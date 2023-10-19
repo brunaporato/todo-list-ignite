@@ -7,7 +7,7 @@ import clipboard from "./assets/clipboard.svg";
 
 import styles from "./App.module.css";
 import "./global.css";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 interface TaskItem {
   id: number;
@@ -19,9 +19,7 @@ export function App() {
   const [tasks, setTasks] = useState<TaskItem[]>([]);
   const [newTask, setNewTask] = useState<string>('');
 
-  function handleCreateNewTask(e: FormEvent) {
-    e.preventDefault();
-
+  function handleCreateNewTask() {
     if(newTask == '') {
       alert('Tarefa inválida')
       return
@@ -63,6 +61,12 @@ export function App() {
     return completedTasks.length;
   }
 
+  function pressEnterAddTask(e: React.KeyboardEvent) {
+    if(e.key === 'Enter') {
+      handleCreateNewTask();
+    }
+  }
+
   const completedTaskCount = countCompletedTasks(tasks);
 
   return (
@@ -73,6 +77,7 @@ export function App() {
           <Input
             onChange={handleNewTaskChange}
             value={newTask}
+            pressEnter={pressEnterAddTask}
           />
           <BttnCreate
             onClick={handleCreateNewTask}
