@@ -58,6 +58,13 @@ export function App() {
     setTasks(updatedTasks);
   }
 
+  function countCompletedTasks(tasks: TaskItem[]) {
+    const completedTasks = tasks.filter(task => task.done === true);
+    return completedTasks.length;
+  }
+
+  const completedTaskCount = countCompletedTasks(tasks);
+
   return (
     <div className={styles.page}>
       <Header />
@@ -79,7 +86,7 @@ export function App() {
             </div>
             <div className={styles.done}>
               <p>Concluídas</p>
-              <span>0</span>
+              <span>{completedTaskCount}</span>
             </div>
           </div>
           <div className={tasks.length == 0 ? styles.hide : styles.tasks}>
