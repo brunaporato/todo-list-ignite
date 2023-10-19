@@ -1,18 +1,22 @@
 import { Header } from "./components/Header";
 import { Input } from "./components/Input";
 import { BttnCreate } from "./components/BttnCreate";
-import { BttnDelete } from "./components/BttnDelete";
 import { Task } from "./components/Task";
+
+import styles from "./App.module.css";
 import "./global.css";
 
 export function App() {
   return (
-    <div>
+    <div className={styles.page}>
       <Header />
-      <Input />
-      <BttnCreate />
-      <BttnDelete />
-      <Task text="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer." />
+      <div className={styles.container}>
+        <div className={styles.inputSection}>
+          <Input />
+          <BttnCreate />
+        </div>
+        <Task text="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer." />
+      </div>
     </div>
   )
 }
