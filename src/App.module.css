@@ -31,6 +31,7 @@
   align-items: center;
 
   padding-bottom: 2.4rem;
+  gap: 1.2rem;
 }
 
 .created, .done {
@@ -95,4 +96,11 @@
   display: none;
   height: 0;
   width: 0;
+}
+
+@media (max-width: 520px) {
+  .mainTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
