@@ -1,4 +1,4 @@
-.header {
+.header, .lightmode {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,3 +22,14 @@
     cursor: pointer;
   }
 }
+
+.lightmode {
+  background: var(--gray-200);
+
+  >h1 {
+    >span {
+     color: var(--purple);
+    }
+  }
+}
+

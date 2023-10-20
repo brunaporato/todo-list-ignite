@@ -70,7 +70,7 @@ export function App() {
   const completedTaskCount = countCompletedTasks(tasks);
 
   return (
-    <div className={styles.page}>
+    <div className={styles.page && styles.lightmode}>
       <Header />
       <div className={styles.container}>
         <div className={styles.inputSection}>
