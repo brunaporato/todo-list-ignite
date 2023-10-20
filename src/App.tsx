@@ -8,6 +8,7 @@ import clipboard from "./assets/clipboard.svg";
 import styles from "./App.module.css";
 import "./global.css";
 import { ChangeEvent, useState } from "react";
+import { BttnMode } from "./components/BttnMode";
 
 interface TaskItem {
   id: number;
@@ -18,6 +19,11 @@ interface TaskItem {
 export function App() {
   const [tasks, setTasks] = useState<TaskItem[]>([]);
   const [newTask, setNewTask] = useState<string>('');
+  const [lightmode, setLightmode] = useState<boolean>(false)
+
+  function toggleMode() {
+    setLightmode(!lightmode);
+  }
 
   function handleCreateNewTask() {
     if(newTask == '') {
@@ -70,7 +76,11 @@ export function App() {
   const completedTaskCount = countCompletedTasks(tasks);
 
   return (
-    <div className={styles.page && styles.lightmode}>
+    <div className={`${styles.page} ${lightmode ? 'lightmode' : ''}`}>
+      <BttnMode
+        onClick={toggleMode}
+        lightmode={lightmode}
+      />
       <Header />
       <div className={styles.container}>
         <div className={styles.inputSection}>

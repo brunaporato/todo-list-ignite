@@ -11,7 +11,7 @@ export function Input({ onChange, value, pressEnter }: InputProps) {
 
   return (
     <input
-      className={styles.input && styles.lightmode}
+      className={styles.input}
       type="text"
       onChange={onChange}
       placeholder="Adicione uma nova tarefa"

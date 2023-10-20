@@ -1,0 +1,19 @@
+.div {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+
+    color: var(--gray-200);
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.hide {
+    display: none;
+}

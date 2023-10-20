@@ -1,9 +1,6 @@
 .page {
   width: 100%;
-}
-
-.lightmode {
-  background: var(--gray-100);
+  background: var(--gray-600);
   height: 100vh;
 }
 
@@ -54,27 +51,15 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--gray-200);
-    
-    .lightmode & {
-      background: var(--gray-700);
-    }
   }
 }
 
 .created {
   color: var(--blue);
-
-  .lightmode & {
-    color: var(--blue-dark);
-  }
 }
 
 .done {
   color: var(--purple);
-
-  .lightmode & {
-    color: var(--purple-dark);
-  }
 }
 
 .tasks {
@@ -106,12 +91,6 @@
       font-weight: 400;
     }
   }
-
-  .lightmode & {
-    border-top: 1px solid var(--blue-dark);
-
-  }
-
 }
 
 .hide {

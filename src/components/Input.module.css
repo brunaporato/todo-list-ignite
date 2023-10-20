@@ -1,4 +1,4 @@
-.input, .lightmode {
+.input {
   display: flex;
   align-items: center;
   padding: 1.6rem;
@@ -13,17 +13,5 @@
 
   &:focus {
     outline: 1px solid var(--purple-dark);
-  }
-}
-
-.lightmode {
-  background: var(--gray-150);
-  border: 1px solid var(--gray-200);
-
-  color: var(--gray-600);
-
-
-  &:focus {
-    outline: 1px solid var(--purple);
   }
 }

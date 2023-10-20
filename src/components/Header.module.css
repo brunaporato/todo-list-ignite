@@ -1,4 +1,4 @@
-.header, .lightmode {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,16 +20,6 @@
 
   > h1, img {
     cursor: pointer;
-  }
-}
-
-.lightmode {
-  background: var(--gray-200);
-
-  >h1 {
-    >span {
-     color: var(--purple);
-    }
   }
 }
 
