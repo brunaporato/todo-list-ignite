@@ -21,5 +21,17 @@
   > h1, img {
     cursor: pointer;
   }
+
+  > img {
+    animation: moveUp .5s ease-in-out;
+  }
 }
 
+@keyframes moveUp {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
