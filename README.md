@@ -1,7 +1,10 @@
 ![ToDo List logo](./src/assets/logo.svg)
 # ToDo List
 
-This project is currently in development and serves as a basic TODO List application built using React, TypeScript, and Vite.
+This project was developed by <a href="https://linkedin.com/in/brunaporato" target="_blank">Bruna Porato</a> and serves as a basic TODO List application built using React, TypeScript, and Vite.
+
+![ToDo List cover](./src/assets/Cover.png)
+
 
 ## About
 The TODO List is a web page designed for creating and managing tasks. It was developed as a challenge during the React track of the Ignite program, a specialized bootcamp provided by Rocketseat.
